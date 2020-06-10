@@ -4,7 +4,9 @@
     box-sizing: border-box;
     list-style-type: none;
 }
-
+body {
+    /* font-family: 'Averia Serif Libre', cursive; */
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -21,8 +23,24 @@ a {
     justify-content: center;
     align-items: center;
 }
+.h1 {
+    font-size: 2rem;
+}
+.h2 {
+    font-size: 1.5rem;
+}
 :root {
     --border-color: rgb(236, 236, 236);
+}
+.bold {
+    font-weight: 700;
+}
+.i {
+    font-style: italic;
+}
+
+.text-red {
+    color: rgb(223, 3, 3);
 }
 /* **** header ***** */
 .header .container {
@@ -118,13 +136,182 @@ a.login-btn {
 }
 
 .news-update {
-    grid-column: 0/3;
+    grid-column: 1/3;
 }
 
 .news-content {
-    grid-column: 3/10;
+    grid-column: 3/11;
 }
 
 .news-related {
-    grid-column: 10/13;
+    grid-column: 11/13;
+}
+
+/* headlines */
+.headlines {
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    height: 3rem;
+    padding: 0 10px 0 10px;
+}
+
+/* search */
+.search {
+    height: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.search form {
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.search form input {
+    outline:none;
+    border: none;
+    font-size: 1rem;
+    width: 40px;
+}
+.search form input:focus{
+    border-bottom: 2px solid var(--border-color);
+}
+
+.search form button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    color: grey;
+}
+
+/* ****** news update ******* */
+.news-update .date{
+    height: 3rem;
+    border-right: 1px solid var(--border-color) ;
+    border-bottom: 1px solid var(--border-color) ;
+    font-size: .8rem;
+    text-align: center;
+}
+.news-update .news {
+    background-color: rgb(5, 5, 5);
+    color: rgb(190, 190, 190);
+    padding: 15px 5px 50px 5px;
+}
+.news-update .news .h2 {
+    padding-left: 10px;
+    color: white;
+}
+.news-update .news-list li {
+    padding: 20px 0 20px 10px;
+    border-bottom: 1px solid rgb(63, 63, 63);
+}
+.news-update .news-list li:last-child {
+    border: none;
+}
+
+/* news-article */
+.news-article {
+    display: flex;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.news-inner {
+    flex-basis: 75%;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+.news-inner article {
+    padding: 3rem;
+}
+.news-inner img {
+    width: 100%;
+}
+.news-inner p.title {
+    margin-top: 50px;
+    font-size: 3rem;
+}
+.news-inner p.sub-title {
+    margin: 20px 0;
+    color: grey;
+    font-weight: 600;
+}
+.news-inner p.news-detail {
+    margin: 4rem 0;
+    color: grey;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+.read-more {
+    padding: 15px 15px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    text-transform: uppercase;
+    color: grey;
+    min-width: 100px;
+}
+.read-more i {
+    border-left: 1px solid var(--border-color);
+    padding-left: 1rem;
+    color: grey;
+}
+.read-more span {
+    padding-right: .5rem;
+}
+.news-slider {
+    margin-top: 3.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem;
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+.news-slider i {
+    color: red;
+    padding: 5px 15px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+/* ads */
+.ads {
+    flex-basis: 25%;
+    padding: 1rem 0 2rem 0;
+}
+.ads .ads-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 2rem 1rem;
+}
+.ads .ads-item img {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.ads .ads-item p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+
+/* related-news */
+.related-news {
+    display: block;
+    padding-top: 2rem;
+}
+.related-news a {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--border-color);
+    margin: 1rem .5rem;
+    padding-bottom: 1rem;
+}
+.related-news a img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1.5rem;
 }
